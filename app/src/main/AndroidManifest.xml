@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ovh.valulz.cvclient" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.MainMenuActivity"
+            android:exported="true" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="ANDROID.INTENT.CATEGORY.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.DisplayCVsActivity"
+            android:label="@string/title_activity_display_cvs" >
+        </activity>
+        <activity
+            android:name=".activity.DisplayCVActivity"
+            android:label="@string/title_activity_display_cvs" >
+        </activity>
+        <activity
+            android:name=".activity.FormCVActivity"
+            android:label="@string/title_activity_form_cv" >
+        </activity>
+        <activity
+            android:name=".activity.FormCVExpActivity"
+            android:label="@string/title_activity_form_cv" >
+        </activity>
+        <activity
+            android:name=".activity.FormCVSchoActivity"
+            android:label="@string/title_activity_form_cv" >
+        </activity>
+        <activity android:name=".activity.FormCVLangActivity"
+            android:label="Lang Activity" >
+        </activity>
+        <activity android:name=".activity.FormCVCSSActivity"
+            android:label="CSS Activity" >
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/ShortCVComponent"
+        android:text="@string/cv_id_header"/>
+    <TextView
+        style="@style/ShortCVComponent"
+        android:text="@string/cv_name_header"/>
+    <TextView
+        style="@style/ShortCVComponent"
+        android:text="@string/cv_first_name_header"/>
+
+
+
+
+</LinearLayout>
