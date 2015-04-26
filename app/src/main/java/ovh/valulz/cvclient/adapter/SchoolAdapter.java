@@ -12,7 +12,6 @@ import java.util.Date;
 import java.util.List;
 
 import ovh.valulz.cvclient.R;
-import ovh.valulz.cvclient.model.Experience;
 import ovh.valulz.cvclient.model.School;
 
 public class SchoolAdapter extends BaseAdapter {

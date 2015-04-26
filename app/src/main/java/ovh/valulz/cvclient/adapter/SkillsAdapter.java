@@ -12,7 +12,6 @@ import java.util.List;
 
 import ovh.valulz.cvclient.R;
 import ovh.valulz.cvclient.model.ComputerScienceSkill;
-import ovh.valulz.cvclient.model.Language;
 
 public class SkillsAdapter extends BaseAdapter {
 

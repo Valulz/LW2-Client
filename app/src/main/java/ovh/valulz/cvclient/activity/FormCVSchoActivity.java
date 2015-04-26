@@ -8,8 +8,6 @@ import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
-import java.util.Calendar;
-
 import ovh.valulz.cvclient.R;
 import ovh.valulz.cvclient.util.BKEY;
 
@@ -71,6 +69,7 @@ public class FormCVSchoActivity extends Activity  {
 
     public void next(View view) {
         addValues();
+        b.putInt(BKEY.K_NUM_LANG, 1);
 
         Intent intent = new Intent(this, FormCVLangActivity.class);
         intent.putExtra("bundle", b);

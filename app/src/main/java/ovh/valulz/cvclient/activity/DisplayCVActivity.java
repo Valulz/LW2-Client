@@ -3,8 +3,6 @@ package ovh.valulz.cvclient.activity;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -13,7 +11,6 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -23,12 +20,9 @@ import ovh.valulz.cvclient.R;
 import ovh.valulz.cvclient.adapter.ExperienceAdapter;
 import ovh.valulz.cvclient.adapter.LangAdapter;
 import ovh.valulz.cvclient.adapter.SchoolAdapter;
-import ovh.valulz.cvclient.adapter.ShortCVAdapter;
 import ovh.valulz.cvclient.adapter.SkillsAdapter;
 import ovh.valulz.cvclient.handler.CVHandler;
-import ovh.valulz.cvclient.handler.ShortCVHandler;
 import ovh.valulz.cvclient.model.CV;
-import ovh.valulz.cvclient.model.ShortCV;
 
 public class DisplayCVActivity extends Activity {
 

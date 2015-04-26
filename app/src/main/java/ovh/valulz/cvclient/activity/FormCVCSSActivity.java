@@ -5,12 +5,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.NumberPicker;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -31,12 +27,7 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 import ovh.valulz.cvclient.R;
-import ovh.valulz.cvclient.adapter.ExperienceAdapter;
-import ovh.valulz.cvclient.adapter.LangAdapter;
-import ovh.valulz.cvclient.adapter.SchoolAdapter;
-import ovh.valulz.cvclient.adapter.SkillsAdapter;
 import ovh.valulz.cvclient.handler.CVHandler;
-import ovh.valulz.cvclient.model.CV;
 import ovh.valulz.cvclient.util.BKEY;
 
 public class FormCVCSSActivity extends Activity {

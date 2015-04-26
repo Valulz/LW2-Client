@@ -2,45 +2,13 @@ package ovh.valulz.cvclient.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.TextView;
-
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
 
 import ovh.valulz.cvclient.R;
-import ovh.valulz.cvclient.adapter.ExperienceAdapter;
-import ovh.valulz.cvclient.adapter.ShortCVAdapter;
-import ovh.valulz.cvclient.handler.ShortCVHandler;
-import ovh.valulz.cvclient.model.Experience;
-import ovh.valulz.cvclient.model.ShortCV;
 import ovh.valulz.cvclient.util.BKEY;
 
 public class FormCVActivity extends Activity {
@@ -80,9 +48,6 @@ public class FormCVActivity extends Activity {
         Intent intent = new Intent(this, FormCVExpActivity.class);
         intent.putExtra("bundle", b);
         startActivity(intent);
-
-        //SendCVTask task = new SendCVTask();
-        //task.execute(new String[]{"http://lw2-valulz.rhcloud.com/resume/"});
     }
 
 

@@ -4,12 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
-
-import java.util.Calendar;
 
 import ovh.valulz.cvclient.R;
 import ovh.valulz.cvclient.util.BKEY;
@@ -32,40 +29,35 @@ public class FormCVExpActivity extends Activity {
         this.b = getIntent().getBundleExtra("bundle");
         setContentView(R.layout.activity_exp);
 
-        txt_num_exp = (TextView)findViewById(R.id.txt_num_exp);
-        txt_value = (EditText)findViewById(R.id.txt_value);
-        year_beg = (NumberPicker)findViewById(R.id.year_beg);
-        month_beg = (NumberPicker)findViewById(R.id.month_beg);
-        year_end = (NumberPicker)findViewById(R.id.year_end);
-        month_end = (NumberPicker)findViewById(R.id.month_end);
+        txt_num_exp = (TextView) findViewById(R.id.txt_num_exp);
+        txt_value = (EditText) findViewById(R.id.txt_value);
+        year_beg = (NumberPicker) findViewById(R.id.year_beg);
+        month_beg = (NumberPicker) findViewById(R.id.month_beg);
+        year_end = (NumberPicker) findViewById(R.id.year_end);
+        month_end = (NumberPicker) findViewById(R.id.month_end);
 
-        year_beg.setMinValue(1900); year_beg.setMaxValue(2100);
-        month_beg.setMinValue(1);   month_beg.setMaxValue(12);
-        year_end.setMinValue(1900); year_end.setMaxValue(2100);
-        month_end.setMinValue(1);   month_end.setMaxValue(12);
+        year_beg.setMinValue(1900);
+        year_beg.setMaxValue(2100);
+        month_beg.setMinValue(1);
+        month_beg.setMaxValue(12);
+        year_end.setMinValue(1900);
+        year_end.setMaxValue(2100);
+        month_end.setMinValue(1);
+        month_end.setMaxValue(12);
 
         int nb = b.getInt(BKEY.K_NUM_EXP);
 
         txt_num_exp.setText("Experience #" + nb);
-        /*if(b != null) {
-            txt_value.setText(b.getString(BKEY.K_VALUE_EXP + nb));
-
-            year_beg.setValue(b.getInt(BKEY.K_BEGIN_YEAR_EXP+nb));
-            month_beg.setValue(b.getInt(BKEY.K_BEGIN_MONTH_EXP+nb));
-            year_end.setValue(b.getInt(BKEY.K_END_YEAR_EXP+nb));
-            month_end.setValue( b.getInt(BKEY.K_END_MONTH_EXP+nb));
-        }*/
-
     }
 
-    private void addValues(){
+    private void addValues() {
         int nb = b.getInt(BKEY.K_NUM_EXP);
 
-        b.putString(BKEY.K_VALUE_EXP+nb, txt_value.getText()+"");
+        b.putString(BKEY.K_VALUE_EXP + nb, txt_value.getText() + "");
         b.putInt(BKEY.K_BEGIN_YEAR_EXP + nb, year_beg.getValue());
-        b.putInt(BKEY.K_BEGIN_MONTH_EXP+nb, month_beg.getValue());
-        b.putInt(BKEY.K_END_YEAR_EXP+nb, year_end.getValue());
-        b.putInt(BKEY.K_END_MONTH_EXP+nb, month_end.getValue());
+        b.putInt(BKEY.K_BEGIN_MONTH_EXP + nb, month_beg.getValue());
+        b.putInt(BKEY.K_END_YEAR_EXP + nb, year_end.getValue());
+        b.putInt(BKEY.K_END_MONTH_EXP + nb, month_end.getValue());
 
     }
 
@@ -81,7 +73,7 @@ public class FormCVExpActivity extends Activity {
     public void next(View view) {
         addValues();
         b.putInt(BKEY.K_NUM_SCHO, 1);
-        
+
         Intent intent = new Intent(this, FormCVSchoActivity.class);
         intent.putExtra("bundle", b);
         startActivity(intent);
